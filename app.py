@@ -2,9 +2,13 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/')
+def innit():
+    return render_template("sucesso.html")
+
 @app.route('/register')
-def pagecad():
-    return "Cadastro feito"
+def register():
+    return render_template("index.html")
 
 @app.route('/profile/<username>')
 def profile(username):
