@@ -23,11 +23,15 @@ with app.app_context():
 
 @app.route('/')
 def innit():
-    return render_template("sucesso.html")
+    return render_template("home.html")
 
 @app.route('/register')
 def register():
-    return render_template("index.html")
+    return render_template("register.html")
+
+@app.route('/term')
+def term():
+    return render_template("term.html")
 
 @app.route('/register-db', methods=['POST'])
 def register_db():
